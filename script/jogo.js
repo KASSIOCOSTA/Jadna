@@ -7,6 +7,7 @@ const memorias = document.querySelector('.memorias')
 const gameOver = document.querySelector('.game-over')
 const atualizar = document.querySelector('.atualizar')
 const win = document.querySelector('.win')
+const audioPulo = document.querySelector('.pulo-moto')
 let contador = 0
 
 start.addEventListener('click',()=>{
@@ -21,7 +22,8 @@ const jump = ()=>{
     setTimeout(()=>{
         moto.classList.remove('jump')
     },500)
-
+    audioPulo.currentTime =0
+    audioPulo.play()
     contador++
     pontos.textContent = contador
 
