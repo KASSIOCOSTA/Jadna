@@ -64,13 +64,14 @@
 
 .moto{
     position: absolute;
-    width: 100px;
+    width: 120px;
     bottom: 0;
    
 }
 .dog{
     position: absolute;
     width: 70px;
+<<<<<<< Updated upstream
     right: -75px;
     bottom: 0;
     
@@ -123,10 +124,20 @@ animation: dog 1.1s linear infinite;
     }
 }
 
+=======
+    right: 50%;
+    bottom: 0;
+}
+
+.jump{
+animation:  pulo 1s infinite linear;
+}
+>>>>>>> Stashed changes
 @keyframes pulo{
     0%,100%{
         bottom: 0;
     }
+<<<<<<< Updated upstream
     40%,50%,60%,70%,80%{
         bottom: 110px;
         transform: rotate(-30deg);
@@ -173,4 +184,9 @@ animation: dog 1.1s linear infinite;
 }
 .atualizar{
     display: none;
+=======
+    40%,50%,60%{
+        bottom: 180px;
+    }
+>>>>>>> Stashed changes
 }
