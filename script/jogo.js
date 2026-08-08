@@ -5,6 +5,8 @@ const pular = document.querySelector('.pular')
 const pontos = document.querySelector('.pontos')
 const memorias = document.querySelector('.memorias')
 const gameOver = document.querySelector('.game-over')
+const atualizar = document.querySelector('.atualizar')
+const win = document.querySelector('.win')
 let contador = 0
 
 start.addEventListener('click',()=>{
@@ -28,10 +30,12 @@ const jump = ()=>{
         moto.classList.add('end')
         pular.style.display ='none'
         memorias.style.display ='block'
+        win.style.display ='block'
 
     }
 }
 const loop = setInterval(() => {
+
     const dogPosition = dog.offsetLeft
     const motoPosition = +window.getComputedStyle(moto).bottom.replace('px','')
 
@@ -44,9 +48,16 @@ const loop = setInterval(() => {
         dog.src ='../img/sepultura.png'
         gameOver.style.display ='block'
         moto.classList.add('sair')
-
+        pular.style.display ='none'
+        atualizar.style.display= 'block'
+        clearInterval(loop)
     }
-    console.log(motoPosition)
+    
 }, 10);
 
+function reload(){
+    location.reload()
+}
+
+atualizar.addEventListener('click', reload)
 pular.addEventListener('click',jump)
