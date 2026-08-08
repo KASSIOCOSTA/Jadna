@@ -64,3 +64,6 @@ function reload(){
 
 atualizar.addEventListener('click', reload)
 pular.addEventListener('click',jump)
+memorias.addEventListener('click',()=>{
+    window.location.href ="../page/memorias.html"
+})
