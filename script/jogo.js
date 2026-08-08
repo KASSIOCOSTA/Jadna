@@ -29,8 +29,11 @@ const jump = ()=>{
         dog.style.display='none'
         moto.classList.add('end')
         pular.style.display ='none'
-        memorias.style.display ='block'
+        
         win.style.display ='block'
+        setInterval(()=>{
+            memorias.style.display ='block'
+        },3000)
 
     }
 }
