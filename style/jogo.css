@@ -46,7 +46,12 @@
         right: 100%;
     }
 }
-
+.cidades{
+    position: absolute;
+    z-index: 99;
+    width: 1500px;
+    bottom: 0;
+}
 .moto{
     position: absolute;
     width: 100px;
