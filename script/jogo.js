@@ -22,7 +22,7 @@ const jump = ()=>{
     setTimeout(()=>{
         moto.classList.remove('jump')
     },500)
-    audioPulo.st
+    
     audioPulo.currentTime =0.75
     audioPulo.play()
     contador++
