@@ -132,5 +132,5 @@ setTimeout(()=>{
     sumir.style.display ='none'
     }
     
-    window.location.href ='../page/menu.html'
+    window.location.href ='page/menu.html'
 },24000)
