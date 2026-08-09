@@ -127,6 +127,8 @@ window.onload = function () {
 };
 
 const sumir = document.querySelector('.sumir')
+const inicair = document.querySelector('.iniciar')
+
 setTimeout(()=>{
     if(sumir){
     sumir.style.display ='none'
@@ -134,3 +136,8 @@ setTimeout(()=>{
     
     window.location.href ='page/menu.html'
 },23000)
+
+const frase = document.querySelector('.fraseInicio')
+setTimeout(()=>{
+    frase.classList.add('aparecer')
+},5000)

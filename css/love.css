@@ -184,6 +184,37 @@ body {
 }
 
 /*---------------------- footer -------------------------*/
+
+.iniciar{
+    position: absolute;
+    font-size: 7em;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    padding: 35px;
+}
 .sumir{
     display: block;
+}
+.fraseInicio{
+    display: none;
+    position: absolute;
+    font-size: 4em;
+    width: 500px;
+    right: 30px;
+    bottom: 150px;
+    animation: sugir 2s linear;
+}
+.aparecer{
+    
+    display: block;
+}
+
+@keyframes sugir{
+    0%{
+        opacity: 0;
+    }100%{
+       opacity: 1;
+    }
 }
