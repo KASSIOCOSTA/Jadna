@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+     background-image: url('../img/fundo.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main{
+
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.33);
+   border-radius: 10px;
+   
+    flex-flow: column nowrap;
+    gap: 0px;
+    justify-content: space-evenly;
+
+    width: 80vw;
+    margin: 0 auto;
+}
+.btn {
+    border-radius: 10px;
+    padding: 20px;
+    opacity: 0;
+    position: relative;
+    animation: entrar 1s forwards;
+}
+
+.btn:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.btn:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.btn:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.btn:nth-child(4) {
+    animation-delay: 3s;
+}
+.btn:nth-child(5) {
+    animation-delay: 4s;
+}
+.btn:nth-child(6) {
+    animation-delay: 5s;
+}
+
+@keyframes entrar {
+    from {
+        left: -50%;
+        opacity: 0;
+    }
+
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
