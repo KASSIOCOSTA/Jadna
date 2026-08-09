@@ -133,4 +133,4 @@ setTimeout(()=>{
     }
     
     window.location.href ='page/menu.html'
-},24000)
+},23000)

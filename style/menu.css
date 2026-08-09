@@ -3,16 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+.menu{
+    
+   
     width: 100vw;
     height: 100vh;
      background-image: url('../img/fundo.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    animation: sugir 1s forwards;
+    
 }
 
-main{
+@keyframes sugir{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.titulo{
+    text-shadow: 1px 1px 1px black;
+    color: white;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+}
+
+.menu main{
 
     padding: 20px;
     text-align: center;
@@ -39,25 +57,25 @@ main{
 }
 
 .btn:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.btn:nth-child(2) {
     animation-delay: 1s;
 }
 
-.btn:nth-child(3) {
+.btn:nth-child(2) {
     animation-delay: 2s;
 }
 
-.btn:nth-child(4) {
+.btn:nth-child(3) {
     animation-delay: 3s;
 }
-.btn:nth-child(5) {
+
+.btn:nth-child(4) {
     animation-delay: 4s;
 }
-.btn:nth-child(6) {
+.btn:nth-child(5) {
     animation-delay: 5s;
+}
+.btn:nth-child(6) {
+    animation-delay: 6s;
 }
 
 @keyframes entrar {
@@ -70,4 +88,21 @@ main{
         left: 0;
         opacity: 1;
     }
+}
+
+
+
+.meus-planos{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    animation: sugir 3s forwards;
+}
+.leia{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 0, 179);
+    animation: sugir 3s forwards;
 }
