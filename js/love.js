@@ -128,6 +128,9 @@ window.onload = function () {
 
 const sumir = document.querySelector('.sumir')
 setTimeout(()=>{
+    if(sumir){
     sumir.style.display ='none'
+    }
+    
     window.location.href ='../page/menu.html'
 },24000)
