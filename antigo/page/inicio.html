@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../css/inicio.css">
+</head>
+<body>
+    
+    <audio src="../media/musica-do-album.mp3"  id="audio"></audio>
+
+
+
+    <div class="album-musica">
+        <div class="cabecalho">
+            <div></div>
+            <p>Essa eu Dedico a você</p>
+            <p style="font-size: 1.2em; font-weight: 1000;">. . . </p>
+        </div><!-- cabeçalho da musica-->
+
+
+
+        <div class="capa">
+            
+
+        </div> <!-- foto da capa do album de musica, ajusta no css-->
+
+
+
+        <input type="range" id="barra" value="0" >
+         <div class="tempo">
+            <span id="atual">00:00</span>
+            <span id="duracao">00:00</span>
+            
+         </div> 
+
+         <div class="nome-musica">
+            <h2>Armandinho</h2>
+            <p>Outra vida (acústico)</p>
+         </div>
+
+
+        <div class="botoes">
+            <!-- 23F8 pause -->
+           <button>&#x23CF;</button>
+           <button>&#x23EE;</button>
+           <button id="btn-play-pause"> &#x25B6;</button>
+           <button>&#x23ED;</button>
+           <button>&#x267E;&#xFE0F;</button>
+        </div> 
+    </div> 
+   
+
+    
+        <div class="tempo-juntos">
+            <div class="foto-tempo-junto">    
+            <p>QUERO TE DIZER ALGO IMPORTANTE</p>
+    
+            <button onclick="proxPaginaMensagem()" class="button">
+                Abrir  mensagem
+            </button>
+    
+            </div>
+    
+            <div class="tempo-junto">
+                <div class="tempo-text">
+                    <h2 style=" font-family: 'Meow Script', cursive;">Nossa Historia</h2>
+               
+                    <div class="text">
+                    <p>A primeira vez que saimos foi <br> 21 de Setembro de 2025  </p>
+                    <p>Você é especial para mim á     extamente:</p>
+                    </div>
+                </div>
+    
+    
+                <div class="tempo-min">
+                   
+                    <p>
+                        <span id="dias">00</span> <br>
+                        <span>DIAS</span>
+                    </p>
+                    <p>
+                        <span id="horas">00</span> <br>
+                        <span>HORAS</span>
+                    </p>
+    
+            
+                    <p class="item">
+                        <span id="minutos">00</span> <br>
+                        <span   >Min</span>
+                    </p>
+    
+                    <p class="item">
+                        <span id="segundos">00</span> <br>
+                        <span >Seg</span>
+                    </p>
+    
+    
+            
+                </div>
+            </div>
+        </div>
+    
+    
+       
+    
+
+    <div class="momentos">
+        <img src="../img/momentos.png" class="img">
+
+        <button onclick="proxPaginaMomentos()">Abrir</button>
+
+        
+        
+    </div>
+
+  <button class="voltarTudo">Voltar ao menu principal</button>
+    
+
+
+ <script src="../js/inicio.js"></script>
+    <!-- foto de fundo com a musica-->    
+</body>
+</html>

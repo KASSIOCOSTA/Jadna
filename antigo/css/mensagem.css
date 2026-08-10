@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.interface{
+    padding: 8px;
+    background-color: white;
+    width: 100vw;
+    max-width: 600px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.interface .top{
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.092);
+}
+.interface .top img{
+    width: 130px;
+}
+.interface .foto{
+    background-image: url('../img/foto-instagram.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(1);
+    width:100% ;
+    height: 350px;
+}
+.interface .curtidas{font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+.interface .curtidas .curt{
+    display: flex;
+    gap: 15px;
+}
+.interface .curtidas .curt div{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+.interface .curtidas .curt div p{
+   font-size: 1.05em;
+   font-weight: bold;
+    align-self: center;
+}
+
+.interface .seguidores{
+    display: flex;
+    gap: 10px;
+}
+.interface .seguidores img{
+    width: 25px;
+}
+.interface .seguidores p{
+    align-self: center;
+}
+.interface .bottom{
+   margin-top: auto;
+   width: 100%;
+   display: flex;
+   justify-content: space-around;
+   position: sticky;
+   bottom: 0;
+}
+
+.prev{
+    background-color: rgb(249, 19, 19);
+    color: white;
+    position: absolute;
+    left: 41%;
+    transform: translate(-50%);
+    border-radius: 5px;
+    text-decoration: none;
+    animation: aumentar 2s linear infinite;
+    padding: 5px 20px;
+    position: fixed;
+    bottom: 5px;
+}
+@keyframes aumentar{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+
+}

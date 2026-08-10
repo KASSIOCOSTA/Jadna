@@ -6,24 +6,31 @@ const leia =document.querySelector('.leia')
 const btnVoltar = document.querySelectorAll('.btnVoltar')
 
 
-//meus planos
+//meus planos 0
 btns[0].addEventListener('click',()=>{
     menu.style.display = 'none'
     meusPlanos.style.display = 'block'
 })
 
-//Leia
+//Leia 1
 btns[1].addEventListener('click',()=>{
     menu.style.display = 'none'
     leia.style.display = 'block'
 })
 
 
-// jogo
+// jogo 2
 btns[2].addEventListener('click',()=>{
     window.location.href = '../page/jogo.html'
 })
 console.log(btns)
+
+
+// Site anterior
+btns[3].addEventListener('click',()=>{
+    window.location.href = '../antigo/page/inicio.html'
+})
+
 
 
 // btn bloqueado

@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    position: relative;
+    background-image: url('../img/fundo-body.png');
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    animation: iniciarSuave 2s linear;
+    
+}
+@keyframes iniciarSuave{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+.album-musica{
+    background-color: #ffffff37;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    margin-bottom: 60px;
+    
+    width: 90%;
+    max-width: 600px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid rgba(255, 255, 255, 0.245);
+    box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.507);
+}
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    text-shadow: 
+    1px 1px black,
+    -1px -1px black,
+    1px -1px black,
+    -1px 1px black;
+    
+}
+.cabecalho div{
+    position: relative;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    transform: rotate(45deg);
+    top: -30%;
+    box-sizing: border-box;
+    
+}
+.capa{
+    background-image: url(../img/foto-musica.jpg);
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    width: 100%;
+    height: 320px;
+}
+
+.tempo{
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+}
+.nome-musica{
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.2em;
+    text-shadow: 
+    1px 1px black,
+    -1px -1px black,
+    1px -1px black,
+    -1px 1px black;
+}
+.botoes{
+    display: flex;
+    
+    justify-content: space-between;
+}
+.botoes button{
+    -webkit-tap-highlight-color: transparent;
+     appearance: none;
+  -webkit-appearance: none;
+
+
+    margin-top: 5px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 1em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgba(255, 0, 0, 0.399);
+}
+#btn-play-pause{
+    border: rgba(255, 0, 0, 0.813) solid 2px;
+    background: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 1.1em;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+#btn-play-pause:focus{
+    outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+#barra{
+    margin-top: 5px;
+    accent-color: rgb(60, 98, 249);
+    display: block;
+    background-color: rgba(255, 255, 255, 0.51);
+    height: 16px;
+}
+
+/*css do album de musica */
+
+
+.tempo-juntos{
+    
+    width: 97%;
+    max-width: 600px;
+    height: 300px;
+    background-color: rgba(40, 40, 40, 0.244);
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 20px 20px 20px 20px;
+    margin-bottom: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.381);
+    box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.507);
+    
+
+}
+.foto-tempo-junto{
+    
+    flex-basis: 230px;
+    background-color: rgba(255, 0, 0, 0.329);
+    border-radius: 0px 20px 20px 0px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+
+
+}
+.foto-tempo-junto p{
+    color: white;
+    font-size: 1.5em;
+}
+
+.tempo-juntos .text p{
+    font-family:'Poppins',sans-serif ;
+    font-variant: small-caps;
+   
+}
+.text{
+   padding: 8px;
+}
+.foto-tempo-junto .button{
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+    border-radius: 15px;
+    border: none;
+    background-image: linear-gradient(to bottom, #f28fcea2,rgba(207, 3, 3, 0.802));
+    padding: 5px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: normal;
+    border: rgb(255, 255, 255) 1px solid;
+    animation: bordas .5s linear infinite;
+    text-shadow: 
+    1px 1px black,
+    -1px -1px black,
+    1px -1px black,
+    -1px 1px black;
+}
+@keyframes bordas {
+    0%{
+        border-top: red 1px solid;
+    }25%{
+        border-right: red 1px solid;
+    }50%{
+        border-bottom: red 1px solid;
+    }75%{
+        border-left: red 1px solid;
+    }
+}
+.tempo-junto{
+    
+     
+    width: 100%;
+    color: white;
+    padding: 4px;
+    
+   
+
+
+}
+.tempo-min{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 5px;
+}
+.tempo-min p{
+    flex: 0 0 60px;
+    
+   background-image: linear-gradient(to top, #4c0047a5, #c9184a3c,#6f006874); 
+   padding: 5px;
+   border-radius: 10px;
+   text-align: center;
+   animation: aumentarLetra 2s linear infinite;
+   
+}
+
+@keyframes aumentarLetra{
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+}
+
+
+
+
+
+
+.momentos{
+    
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-bottom: 70px;
+
+}
+.momentos .img{
+    position: relative;
+    width: 350px;
+    opacity: 0.6;
+}
+
+.momentos .momentosfoto{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    left: 100%;
+}
+.momentos button{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 60px;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 20px;
+
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+    border-radius: 15px;
+    border: none;
+    background-image: linear-gradient(to bottom, #ffffffa2,rgba(207, 3, 3, 0.382));
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant: normal;
+    border: rgb(255, 255, 255) 1px solid;
+    animation: bordas .5s linear infinite;
+    text-shadow: 
+    1px 1px black,
+    -1px -1px black,
+    1px -1px black,
+    -1px 1px black;
+    
+}
+
+
+.roda-pe{
+            background-image: linear-gradient(to right,#003324,#00513b,#003324);
+            position: relative;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 5px 10px 10px;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .roda-pe img{
+            width: 100px;
+        }
+
+        .roda-pe p{
+            color: white;
+        }
+        .roda-pe .links{
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+        .roda-pe .links a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .voltarTudo{
+            
+            padding: 10px;
+            border-radius: 5px;
+            font-variant: small-caps;
+        }
