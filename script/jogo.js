@@ -33,14 +33,13 @@ const jump = ()=>{
     
     audioPulo.currentTime =0.75
     audioPulo.play()
-    contador++
     pontos.textContent = contador
     if(contador ===10){
         dog.style.animation = 'dog 1s linear infinite';
     }
     
     
-    if(contador==20){
+    if(contador==19){
         dog.style.display='none'
         moto.classList.add('end')
         pular.style.display ='none'
@@ -53,11 +52,22 @@ const jump = ()=>{
 
     }
 }
+
+let passou = false
 const loop = setInterval(() => {
 
     const dogPosition = dog.offsetLeft
     const motoPosition = +window.getComputedStyle(moto).bottom.replace('px','')
 
+
+    if(dogPosition<71 && !passou){
+        contador++
+        pontos.textContent =contador
+        passou =true
+    }
+    if(dogPosition>71){
+        passou=false
+    }
     if(dogPosition<=75 && dogPosition>0 && motoPosition <50){
         dog.style.animation = 'none'
         dog.style.left = `${dogPosition}px`
