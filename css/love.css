@@ -218,3 +218,8 @@ body {
        opacity: 1;
     }
 }
+.toque{
+    position: absolute;
+    bottom: 50px;
+
+}

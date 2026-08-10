@@ -128,7 +128,7 @@ window.onload = function () {
 
 const sumir = document.querySelector('.sumir')
 const audio = document.querySelector('.audio')
-audio.addEventListener('touchstart',()=>{
+document.addEventListener('click',()=>{
     audio.play()
 })
 setTimeout(()=>{
