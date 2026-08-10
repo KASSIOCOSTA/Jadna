@@ -17,7 +17,7 @@ let contador = 0
 
 start.addEventListener('click',()=>{
     audioDragonball.currentTime = 19
-    audioDragonball.volume=0.7
+    audioDragonball.volume=0.5
     audioDragonball.play()
     start.style.display = 'none'
     pular.style.display = 'block'
@@ -35,8 +35,12 @@ const jump = ()=>{
     audioPulo.play()
     contador++
     pontos.textContent = contador
-
-    if(contador==10){
+    if(contador ===10){
+        dog.style.animation = 'dog 1s linear infinite';
+    }
+    
+    
+    if(contador==20){
         dog.style.display='none'
         moto.classList.add('end')
         pular.style.display ='none'
