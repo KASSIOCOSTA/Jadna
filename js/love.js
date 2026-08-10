@@ -127,7 +127,7 @@ window.onload = function () {
 };
 
 const sumir = document.querySelector('.sumir')
-const inicair = document.querySelector('.iniciar')
+
 
 setTimeout(()=>{
     if(sumir){

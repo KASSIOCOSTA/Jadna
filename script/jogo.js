@@ -7,10 +7,18 @@ const memorias = document.querySelector('.memorias')
 const gameOver = document.querySelector('.game-over')
 const atualizar = document.querySelector('.atualizar')
 const win = document.querySelector('.win')
+
+
+const audioDragonball = document.querySelector('.dragonball')
 const audioPulo = document.querySelector('.pulo-moto')
+const audioGameOver = document.querySelector('.gameOver')
+
 let contador = 0
 
 start.addEventListener('click',()=>{
+    audioDragonball.currentTime = 19
+    audioDragonball.volume=0.7
+    audioDragonball.play()
     start.style.display = 'none'
     pular.style.display = 'block'
     setTimeout(()=>{
@@ -34,6 +42,7 @@ const jump = ()=>{
         pular.style.display ='none'
         
         win.style.display ='block'
+        audioDragonball.volume =1
         setInterval(()=>{
             memorias.style.display ='block'
         },3000)
@@ -56,6 +65,8 @@ const loop = setInterval(() => {
         moto.classList.add('sair')
         pular.style.display ='none'
         atualizar.style.display= 'block'
+        audioDragonball.pause()
+        audioGameOver.play()
         clearInterval(loop)
     }
     
