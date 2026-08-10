@@ -127,8 +127,10 @@ window.onload = function () {
 };
 
 const sumir = document.querySelector('.sumir')
-
-
+const audio = document.querySelector('.audio')
+setTimeout(()=>{
+    audio.play()
+},1000)
 setTimeout(()=>{
     if(sumir){
     sumir.style.display ='none'
