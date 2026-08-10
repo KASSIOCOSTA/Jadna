@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Flor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #f1dbcd;
+            overflow-x: hidden;
+        }
+
+        /* CAMADA DOS EMOJIS (NOVA) */
+        #emoji-layer{
+            position: fixed;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        header{
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            background-color: #f1dbcd;
+            transition: opacity 2s ease;
+        }
+
+        header img{
+            width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .sumir{
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        main{
+            position: relative;
+            transition: background-color 1.5s ease;
+            width: 100vw;
+            height: 100vh;
+            background-color: #f1dbcd; 
+            display: none;
+            color: black;
+            overflow: hidden;
+        }
+
+        main #corpo a{
+            position: absolute;
+            color: white;
+            background-color: rgba(11, 44, 255, 0.85);
+            text-decoration: none;
+            padding: 10px 30px;
+            border: 1px solid rgba(0, 0, 0, 0.53);
+            border-radius: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 0 0 5px rgb(0, 0, 0);
+            z-index: 999;
+        }
+
+        .saltar{
+            animation: saltar 3s linear infinite;
+        }
+
+        main h1{
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+            font-size: 1.5em;
+            font-variant: small-caps;
+            position: absolute;
+            top: 200px;
+            width: 70%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        @keyframes saltar {
+            0%,100%{ font-size: 1em; }
+            50%{ font-size: 1.1em; }
+        }
+
+        #corpo{
+            display: none;
+        }
+
+        /* EMOJIS */
+        .emoji{
+            position: absolute;
+            top: -40px;
+            animation: cair linear forwards;
+            will-change: transform;
+        }
+
+        @keyframes cair{
+            to{
+                transform: translateY(100vh);
+                opacity: 0.8;
+            }
+        }
+.roda-pe{
+            background-image: linear-gradient(to right,#003324,#00513b,#003324);
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 5px 10px 10px;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .roda-pe img{
+            width: 100px;
+        }
+
+        .roda-pe p{
+            color: white;
+        }
+        .roda-pe .links{
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+        .roda-pe .links a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CAMADA DOS EMOJIS -->
+    <div id="emoji-layer"></div>
+
+    <header id="sumir">
+        <img src="img/logo-maria-flor.png" alt="Logo maria Flor">
+    </header>
+
+    <main id="principal">
+        <div id="corpo">
+            <h1>Tenho uma mensagem para Você <br> toque para abrir</h1>
+            <a href="page/inicio.html"><span class="saltar">💐 Abrir</span></a>
+        </div>
+
+            <div class="roda-pe">
+            <img src="img/logo-maria-flor.png" alt="img roda pe">
+            <div class="links">
+                <a href="https://maps.app.goo.gl/zRUaDRsfHsEfCUSV9" target="_blank">📍 Turilândia-MA</a>
+                <p>💐 Cestas | Floricultura (flores naturais)</p>
+                <a href="https://wa.me/5598983071338?text=Ol%C3%A1,%20tudo%20bem" target="_blank">📲 98 983071338 (Das 8h às 18h)</a>
+                <a href="https://wa.me/c/559883071338" target="_blank">👇🏻 Catálogo Digital WhatsApp</a>
+            </p>
+        </div>
+    </main>
+
+    <script>
+        const emojis = ["❤️", "✨", "🔥", "😍", "💖", "🌸", "🎉"];
+        const layer = document.getElementById('emoji-layer');
+
+        function criarEmoji(){
+            const span = document.createElement('span');
+            span.className = 'emoji';
+            span.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+
+            const size = 16 + Math.random()*24;
+            span.style.fontSize = size + "px";
+
+            span.style.left = Math.random() * (window.innerWidth - size) + "px";
+            span.style.animationDuration = (2 + Math.random()*3) + "s";
+
+            layer.appendChild(span);
+
+            span.addEventListener('animationend', () => span.remove());
+        }
+
+        setInterval(criarEmoji,150);
+
+        const sumir = document.querySelector('#sumir');
+        const principal = document.querySelector('#principal');
+        const corpo = document.querySelector('#corpo');
+
+        window.addEventListener('load',()=>{
+            setTimeout(()=>{
+                sumir.classList.add('sumir');
+                setTimeout(()=>{
+                    sumir.style.display='none';
+                    principal.style.display='block';
+                    setTimeout(()=>{
+                        corpo.style.display='block';
+                    },1000);
+                },2000);
+            },1000);
+        });
+    </script>
+
+</body>
+</html>
