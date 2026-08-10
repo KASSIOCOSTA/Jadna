@@ -33,9 +33,11 @@ const jump = ()=>{
     
     audioPulo.currentTime =0.75
     audioPulo.play()
-    pontos.textContent = contador
     if(contador ===10){
         dog.style.animation = 'dog 1s linear infinite';
+    }
+    if(contador ===17){
+        dog.style.animation = 'dog 0.9s linear infinite';
     }
     
     
