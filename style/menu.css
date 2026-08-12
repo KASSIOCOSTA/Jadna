@@ -5,7 +5,7 @@
 }
 .menu{
     
-   display: block;
+   display: none;
     width: 100vw;
     height: 100vh;
      background-image: url('../img/fundo.png');
@@ -93,11 +93,46 @@
 
 
 .meus-planos{
-    display: none;
+    display: block;
     width: 100vw;
     height: 100vh;
-    background-color: aqua;
+    background-color: rgb(255, 123, 0);
     animation: sugir 3s forwards;
+    overflow: hidden;
+}
+.parte1{
+display: none;
+position: relative;
+top: 90px;
+width: 100%;
+height: 400px;
+border: 1px solid black;
+background-color: blueviolet;
+}
+.parte1 .divbtn{
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+.parte1 .divbtn button{
+    font-size: 2em;
+    padding: 5px;
+}
+
+.parte2{
+display: block;
+width: 100%;
+height: 100vh;
+background-color: rgb(43, 198, 226);
+animation: sugir 2s linear;
+position: relative;
+top: 90px;
+width: 100%;
+height: 400px;
+border: 1px solid black;
+
 }
 .leia{
     display: none;
