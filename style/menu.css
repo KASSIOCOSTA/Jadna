@@ -111,15 +111,33 @@ background-color: blueviolet;
 }
 .parte1 .divbtn{
     position: absolute;
-    bottom: -70px;
     left: 50%;
     transform: translate(-50%);
-    
+    bottom: -70px;    
 }
 .parte1 .divbtn button{
     font-size: 2em;
     padding: 5px;
+    
 }
+.kassiocasar{
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+}
+.jadnacasar{
+     height: 250px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+
+
+
 
 .parte2{
 display: none;

@@ -5,11 +5,17 @@ const leia =document.querySelector('.leia')
 
 const btnVoltar = document.querySelectorAll('.btnVoltar')
 
+console.log('comecou')
+let posicaoKassio = 0
 
 //meus planos 0
 btns[0].addEventListener('click',()=>{
+    posicaoKassio = 0
     menu.style.display = 'none'
     meusPlanos.style.display = 'block'
+    parte1.style.display = 'block'
+    parte2.style.display = 'none'
+    
 })
 
 //Leia 1
@@ -58,3 +64,40 @@ function voltar(){
     meusPlanos.style.display = 'none'
     leia.style.display = 'none'
 }
+
+
+const avancar = document.querySelector('.casarAvancar')
+const voltarKassio = document.querySelector('.casarVoltar')
+const kassioCasar = document.querySelector('.kassiocasar')
+const jadnaCasar = document.querySelector('.jadnacasar')
+
+
+const confimador = jadnaCasar.offsetLeft - jadnaCasar.offsetWidth/2
+const parte1 = document.querySelector('.parte1')
+const parte2 = document.querySelector('.parte2')
+
+avancar.addEventListener('click',()=>{
+    
+    posicaoKassio = posicaoKassio +20
+    kassioCasar.style.left = `${posicaoKassio}px`
+    if(posicaoKassio>confimador){
+    posicaoKassio = 0
+    parte1.style.display = 'none'
+    parte2.style.display = 'block'
+    
+}
+
+})
+
+voltarKassio.addEventListener('click',()=>{
+    
+    posicaoKassio = posicaoKassio -20
+    kassioCasar.style.left = `${posicaoKassio}px`
+
+})
+
+
+
+console.log(confimador)
+
+
