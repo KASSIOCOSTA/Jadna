@@ -4,6 +4,7 @@ const meusPlanos =document.querySelector('.meus-planos')
 const leia =document.querySelector('.leia')
 
 const btnVoltar = document.querySelectorAll('.btnVoltar')
+const audioMeusPlanos = document.querySelector('.audioMeusPlanos')
 
 console.log('comecou')
 let posicaoKassio = 0
@@ -15,6 +16,8 @@ btns[0].addEventListener('click',()=>{
     meusPlanos.style.display = 'block'
     parte1.style.display = 'block'
     parte2.style.display = 'none'
+    audioMeusPlanos.currentTime = 29
+    audioMeusPlanos.play()
     
 })
 
@@ -63,6 +66,7 @@ function voltar(){
     menu.style.display = 'block'
     meusPlanos.style.display = 'none'
     leia.style.display = 'none'
+    audioMeusPlanos.pause()
 }
 
 
@@ -78,7 +82,7 @@ const parte2 = document.querySelector('.parte2')
 
 avancar.addEventListener('click',()=>{
     
-    posicaoKassio = posicaoKassio +20
+    posicaoKassio = posicaoKassio +5
     kassioCasar.style.left = `${posicaoKassio}px`
     if(posicaoKassio>confimador){
     posicaoKassio = 0
