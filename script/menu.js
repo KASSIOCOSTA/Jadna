@@ -88,6 +88,7 @@ avancar.addEventListener('click',()=>{
     posicaoKassio = 0
     parte1.style.display = 'none'
     parte2.style.display = 'block'
+    kassioCasar.style.left ='0px'
     
 }
 
