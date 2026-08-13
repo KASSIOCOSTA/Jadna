@@ -72,7 +72,7 @@ const kassioCasar = document.querySelector('.kassiocasar')
 const jadnaCasar = document.querySelector('.jadnacasar')
 
 
-const confimador = jadnaCasar.offsetLeft - jadnaCasar.offsetWidth/2
+const confimador = jadnaCasar.offsetLeft - jadnaCasar.offsetWidth/4
 const parte1 = document.querySelector('.parte1')
 const parte2 = document.querySelector('.parte2')
 
