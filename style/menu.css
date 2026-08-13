@@ -5,7 +5,7 @@
 }
 .menu{
     
-   display: none;
+   display: block;
     width: 100vw;
     height: 100vh;
      background-image: url('../img/fundo.png');
@@ -93,7 +93,7 @@
 
 
 .meus-planos{
-    display: block;
+    display: none;
     width: 100vw;
     height: 100vh;
     background-color: rgb(255, 123, 0);

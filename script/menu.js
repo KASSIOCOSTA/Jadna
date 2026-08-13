@@ -11,7 +11,6 @@ let posicaoKassio = 0
 
 //meus planos 0
 btns[0].addEventListener('click',()=>{
-    posicaoKassio = 0
     menu.style.display = 'none'
     meusPlanos.style.display = 'block'
     parte1.style.display = 'block'
