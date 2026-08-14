@@ -11,21 +11,24 @@ let posicaoKassio = 0
 
 //meus planos 0
 btns[0].addEventListener('click',()=>{
+    btnVoltar[0].style.display ='block'
     posicaoKassio = 0
     kassioCasar.style.left ='0px'
     menu.style.display = 'none'
     meusPlanos.style.display = 'block'
     parte1.style.display = 'block'
     parte2.style.display = 'none'
-    audioMeusPlanos.currentTime = 29
+    audioMeusPlanos.currentTime = 10
     audioMeusPlanos.play()
     
 })
-
+const audioLeia = document.querySelector('.audioLeia')
 //Leia 1
 btns[1].addEventListener('click',()=>{
     menu.style.display = 'none'
     leia.style.display = 'block'
+        audioLeia.currentTime =0
+        audioLeia.play()
 })
 
 
@@ -68,6 +71,7 @@ function voltar(){
     meusPlanos.style.display = 'none'
     leia.style.display = 'none'
     audioMeusPlanos.pause()
+    audioLeia.pause()
 }
 
 
@@ -80,16 +84,23 @@ const jadnaCasar = document.querySelector('.jadnacasar')
 
 const parte1 = document.querySelector('.parte1')
 const parte2 = document.querySelector('.parte2')
+const casados = document.querySelector('.casados')
+const sorriso = document.querySelector('.sorriso')
 
 avancar.addEventListener('click',()=>{
     const confimador = jadnaCasar.offsetLeft - jadnaCasar.offsetWidth/4
-    posicaoKassio = posicaoKassio +5
+    posicaoKassio = posicaoKassio +2
     kassioCasar.style.left = `${posicaoKassio}px`
     if(posicaoKassio>confimador){
     posicaoKassio = 0
     parte1.style.display = 'none'
     parte2.style.display = 'block'
-    
+    setTimeout(()=>{
+        casados.classList.add('irEmbora')
+    },6000)
+    setTimeout(()=>{
+        sorriso.style.display = 'block'
+    },12000)
 }
 
 })
