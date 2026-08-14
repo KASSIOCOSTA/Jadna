@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 .titulo{
+    margin-top: 30px;
     padding: 2px;
     font-size: 1.5em;
     text-align: center;
@@ -173,4 +174,14 @@ animation: dog 1.1s linear infinite;
 }
 .atualizar{
     display: none;
+}
+
+.voltarMenu{
+    margin-top: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 5px;
+    color: black;
+    background-color: rgb(241, 241, 241);
 }
