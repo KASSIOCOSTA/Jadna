@@ -89,7 +89,7 @@ const sorriso = document.querySelector('.sorriso')
 
 avancar.addEventListener('click',()=>{
     const confimador = jadnaCasar.offsetLeft - jadnaCasar.offsetWidth/4
-    posicaoKassio = posicaoKassio +2
+    posicaoKassio = posicaoKassio +4
     kassioCasar.style.left = `${posicaoKassio}px`
     if(posicaoKassio>confimador){
     posicaoKassio = 0
@@ -101,6 +101,9 @@ avancar.addEventListener('click',()=>{
     setTimeout(()=>{
         sorriso.style.display = 'block'
     },12000)
+    setTimeout(()=>{
+        location.reload()
+    },16000)
 }
 
 })
