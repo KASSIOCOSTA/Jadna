@@ -226,16 +226,23 @@ border-bottom: 20px solid black;
     border-radius: 5px;
     position: absolute;
     background-color: rgba(255, 255, 255, 0.37);
-    width: 90vw;
+    width: 80vw;
+    height: 400px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    padding: 10px;
+    padding: 15px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.37);
-    line-height: 1.5em;
      animation: sugir 3s forwards;
-     text-shadow: 1px 1px 1px white;
+     text-shadow: 1px 1px 1px white; 
+     overflow: scroll;
+     line-height: 2em;
     
+}.leia p::-webkit-scrollbar {
+  width: 8px; /* Largura da barra */
+}.leia p::-webkit-scrollbar-thumb {
+  background-color: #888; /* Cor da barra */
+  border-radius: 4px;
 }
 
 .btnVoltar{
