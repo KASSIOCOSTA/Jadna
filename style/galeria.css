@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+.contanier{
+    
+    display: grid;
+    width: 97%;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 300px;
+    grid-auto-rows: 150px;
+    gap: 5px;
+}
+.contanier img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.contanier img:first-child{
+    grid-column: 1/-1;
+}
